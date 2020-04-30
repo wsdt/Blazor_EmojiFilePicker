@@ -2,6 +2,7 @@
 
 Bootstrap Text-Input with Smiley- and File-Support for Blazor.
 
+
 ## Usage
 NuGet-Url: [Nuget.org/packages/Blazor_EmojiFilePicker](https://www.nuget.org/packages/Blazor_EmojiFilePicker)
 
@@ -9,6 +10,7 @@ NuGet-Url: [Nuget.org/packages/Blazor_EmojiFilePicker](https://www.nuget.org/pac
 
 
 ## Features
+* Configurable (e.g. submit-btn, file-picker, ... can be deactivated)
 * Supports HTML
 * Supports Markdown
 * Supports Image-Uploads and provides a collapsable dropzone
