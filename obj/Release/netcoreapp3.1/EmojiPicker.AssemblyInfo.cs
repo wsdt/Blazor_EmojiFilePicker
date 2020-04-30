@@ -12,7 +12,7 @@ using System;
 using System.Reflection;
 
 [assembly: System.Reflection.AssemblyCompanyAttribute("Self-Employed")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyCopyrightAttribute("WSDT - Riedl Kevin")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Provides a simple Bootstrap Text-Input field with Smiley- and File-Support.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("0.0.2.0")]
