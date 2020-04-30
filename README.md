@@ -15,7 +15,9 @@ And add to your Startup.cs-file:
 * Configurable (e.g. submit-btn, file-picker, ... can be deactivated)
 * Supports Image-Uploads (support for multiple files simultaneously) and provides a collapsable dropzone
 ![Dropzone_Images](https://github.com/wsdt/Blazor_EmojiFilePicker/blob/master/docs/img/Dropzone_Smileys.PNG "Dropzone - Images")
+
 * Supports Smileys via simple Popover
+
 ![Emoji_Picker](https://github.com/wsdt/Blazor_EmojiFilePicker/blob/master/docs/img/SmileyPicker.png "Emoji Picker")
 
 ## Dependencies
