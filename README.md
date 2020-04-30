@@ -13,7 +13,7 @@ NuGet-Url: [Nuget.org/packages/Blazor_EmojiFilePicker](https://www.nuget.org/pac
 * Configurable (e.g. submit-btn, file-picker, ... can be deactivated)
 * Supports HTML
 * Supports Markdown
-* Supports Image-Uploads and provides a collapsable dropzone
+* Supports Image-Uploads (support for multiple files simultaneously) and provides a collapsable dropzone
 * Supports Smileys via simple Popover
 
 ## Dependencies
