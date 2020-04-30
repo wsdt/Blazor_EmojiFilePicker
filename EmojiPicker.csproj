@@ -10,7 +10,7 @@
 		<Version>0.0.1</Version>
 		<Authors>Kevin Riedl: github.com/wsdt</Authors>
 		<Company>Self-Employed</Company>
-		<RepositoryUrl>https://github.com/wsdt/RealtimeChat_WebAssembly/</RepositoryUrl>
+		<RepositoryUrl>https://github.com/wsdt/Blazor_EmojiFilePicker</RepositoryUrl>
 		<PackageTags>Blazor;Emoji;Smiley;Input;Text;File;Image;Picker;Bootstrap</PackageTags>
 		
 		<Copyright>WSDT - Riedl Kevin</Copyright>
