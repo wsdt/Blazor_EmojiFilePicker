@@ -33,22 +33,29 @@ services.AddEmojiPicker();
 </thead>
 <tbody>
 <tr>
-<td>@bind-Message</td>
+  <td>**@bind-Message**</td>
 <td>string</td>
-<td><pre lang="csharp"> ChatMsg </pre></td>
+<td><code>ChatMsg</code></td>
 <td>Binds value of input-field to your outer model for validation, form-submission, ...</td>
 </tr>
 <tr>
-<td>MessageChanged</td>
+  <td>**MessageChanged**</td>
 <td>EventCallback<string></td>
-<td><code>csharp null</code></td>
+<td><code>null</code></td>
 <td>Overwrite default onMessageChanged-Callback. Basically just needed for binding.</td>
 </tr>
 <tr>
-<td>AddFiles</td>
-<td>Action<List<string>&gt;</td>
-<td><code>csharp public void AddFiles(List&lt;string&gt; imgUris)     {         foreach (string imgUri in imgUris) AddToMsg($&quot;&lt;img src=&#39;{imgUri}&#39; alt=&#39;Image&#39; class=&#39;resizedImg&#39; /&gt;&quot;);           ChatService.Send();         StateHasChanged();     }</code></td>
-<td>Receive the links to uploaded files as List. Files are uploaded to the provided FileUploadRoute. In case you expect images to be uploaded you could e.g. add them to your view.</td>
+  <td>**AddFiles**</td>
+<td>Action<List<string>></td>
+<td>
+  
+```csharp
+public void AddFiles(List&lt;string&gt; imgUris)     {         foreach (string imgUri in imgUris) AddToMsg($&quot;&lt;img src=&#39;{imgUri}&#39; alt=&#39;Image&#39; class=&#39;resizedImg&#39; /&gt;&quot;);           ChatService.Send();         StateHasChanged();     }
+```
+</td>
+<td>Receive the links to uploaded files as List. Files are uploaded to the provided FileUploadRoute. In case you expect images to be uploaded you could e.g. add them to your view.
+</pre>
+</td>
 </tr>
 <tr>
 <td>FileUploadRoute</td>
