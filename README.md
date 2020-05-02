@@ -33,82 +33,109 @@ services.AddEmojiPicker();
 </thead>
 <tbody>
 <tr>
-  <td>**@bind-Message**</td>
+  <td>@bind-Message</td>
 <td>string</td>
-<td><code>ChatMsg</code></td>
+<td>
+  
+  ```csharp ChatMsg```</td>
 <td>Binds value of input-field to your outer model for validation, form-submission, ...</td>
 </tr>
 <tr>
-  <td>**MessageChanged**</td>
+  <td>MessageChanged</td>
 <td>EventCallback<string></td>
-<td><code>null</code></td>
+<td>
+  
+  ```csharp null```</td>
 <td>Overwrite default onMessageChanged-Callback. Basically just needed for binding.</td>
 </tr>
 <tr>
-  <td>**AddFiles**</td>
+  <td>AddFiles</td>
 <td>Action<List<string>></td>
 <td>
   
 ```csharp
-public void AddFiles(List&lt;string&gt; imgUris)     {         foreach (string imgUri in imgUris) AddToMsg($&quot;&lt;img src=&#39;{imgUri}&#39; alt=&#39;Image&#39; class=&#39;resizedImg&#39; /&gt;&quot;);           ChatService.Send();         StateHasChanged();     }
+public void AddFiles(List<string> imgUris)
+    {
+        foreach (string imgUri in imgUris) AddToMsg($"<img src='{imgUri}' alt='Image' class='resizedImg' />");
+
+        ChatService.Send();
+        StateHasChanged();
+    }
 ```
 </td>
 <td>Receive the links to uploaded files as List. Files are uploaded to the provided FileUploadRoute. In case you expect images to be uploaded you could e.g. add them to your view.
-</pre>
 </td>
 </tr>
 <tr>
 <td>FileUploadRoute</td>
 <td>string</td>
-<td><code>csharp &quot;/api/v1/file_upload&quot;</code></td>
+<td>
+  
+  ```csharp "/api/v1/file_upload"```</td>
 <td>Defines the local route to save uploaded files.</td>
 </tr>
 <tr>
 <td>Placeholder</td>
 <td>string</td>
-<td><code>csharp &quot;Message&quot;</code></td>
+<td>
+  
+  ```csharp "Message"```</td>
 <td>Defines the placeholder for your text-input.</td>
 </tr>
 <tr>
 <td>AddonPrepend</td>
 <td>string</td>
-<td><code>csharp  EmojiList.Envelope</code> or <code>csharp  &quot;✉&quot;</code></td>
+<td>
+  
+  ```csharp  EmojiList.Envelope``` or ```csharp "✉"```</td>
 <td>Defines the Prepend-Addon for the bootstrap input.</td>
 </tr>
 <tr>
 <td>ShowFilePicker</td>
 <td>bool</td>
-<td><code>csharp true</code></td>
+<td>
+  
+  ```csharp  true```</td>
 <td>Should file-picker-Button and Dropzone be enabled?</td>
 </tr>
 <tr>
 <td>ShowSubmit</td>
 <td>bool</td>
-<td><code>csharp true</code></td>
+<td> 
+  
+  ```csharp  true```</td>
 <td>Displays a regular submit-Btn. No callback is required as this component is not nested by a form.</td>
 </tr>
 <tr>
 <td>IsSubmitDisabled</td>
 <td>bool</td>
-<td><code>cshtml @(!ChatService.IsConnected())</code></td>
+<td>
+  
+  ```cshtml @(!ChatService.IsConnected())```</td>
 <td>If Submit-Btn is shown, then this property en- or disables the button.</td>
 </tr>
 <tr>
 <td>SubmitBtnLbl</td>
 <td>string</td>
-<td><code>csharp &quot;Send&quot;</code></td>
+<td> 
+  
+  ```csharp  "Send"```</td>
 <td>Sets the Submit-Label, if the button is shown.</td>
 </tr>
 <tr>
 <td>SmileyBtnIcon</td>
 <td>string</td>
-<td><code>csharp EmojiList.Smiley</code>or <code>csharp &quot;😁&quot;</code></td>
+<td>
+  
+  ```csharp EmojiList.Smiley``` or ```csharp "😁"```</td>
 <td>Defines the smiley-button icon.</td>
 </tr>
 <tr>
 <td>FileBtnIcon</td>
 <td>string</td>
-<td><code>csharp EmojiList.Open_File_Folder</code> or <code>csharp &quot;📎&quot;</code></td>
+<td>
+  
+  ```csharp EmojiList.Open_File_Folder``` or ```csharp "📎"```</td>
 <td>Defines the file-button icon.</td>
 </tr>
 </tbody>
