@@ -1,18 +1,20 @@
-﻿<style>
+﻿@namespace WSDT.EmojiFilePicker.Sub
+
+<style>
     .smiley-btn {
         cursor: pointer;
         padding: 5px;
         border-radius: 10px;
     }
 
-    .smiley-btn:hover {
-        background-color: #ccc;
-    }
+        .smiley-btn:hover {
+            background-color: #ccc;
+        }
 
-    .smiley-btn:active {
-        background-color: #aaa;
-    }
-</style> 
+        .smiley-btn:active {
+            background-color: #aaa;
+        }
+</style>
 
 <span @onclick="@(() => AddEmoji.InvokeAsync(Emoji))" class="smiley-btn">@Emoji</span>
 

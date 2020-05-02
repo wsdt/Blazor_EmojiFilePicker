@@ -18,9 +18,9 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
  */
 
 
-namespace EmojiPicker.Areas.EmojiTextInput.Emoji
+namespace WSDT.EmojiFilePicker
 {
-    public class Emoji
+    public class EmojiList
     {
 
         // Reflection needed, otherwise all constants would need to be referenced statically or moved to an array/list. 

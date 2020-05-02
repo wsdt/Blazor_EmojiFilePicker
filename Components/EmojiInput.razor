@@ -1,5 +1,5 @@
-﻿@using EmojiPicker.Areas.EmojiTextInput.Pages
-@using Emoji
+﻿@namespace WSDT.EmojiFilePicker
+@using WSDT.EmojiFilePicker.Sub
 
 
 <style>
@@ -111,7 +111,7 @@
     public string Placeholder { get; set; }
 
     [Parameter]
-    public string AddonPrepend { get; set; } = Emoji.Envelope;
+    public string AddonPrepend { get; set; } = EmojiList.Envelope;
 
     [Parameter]
     public bool ShowFilePicker { get; set; } = true;
@@ -126,10 +126,10 @@
     public string SubmitBtnLbl { get; set; } = "Send";
 
     [Parameter]
-    public string SmileyBtnIcon { get; set; } = Emoji.Smiley; //"&#x1F600";
+    public string SmileyBtnIcon { get; set; } = EmojiList.Smiley; //"&#x1F600";
 
     [Parameter]
-    public string FileBtnIcon { get; set; } = Emoji.Open_File_Folder; // "&#128206;";
+    public string FileBtnIcon { get; set; } = EmojiList.Open_File_Folder; // "&#128206;";
 
     protected void AddEmoji(string emoji) => Message += emoji;
 
