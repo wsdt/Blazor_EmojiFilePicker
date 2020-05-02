@@ -15,7 +15,7 @@ services.AddEmojiPicker();
 ```
 
 3. Add the component to your **.razor-View**:
-```csharp
+```cshtml
 @using WSDT.EmojiFilePicker
 <EmojiInput />
 ```
