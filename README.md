@@ -6,10 +6,19 @@ Bootstrap Text-Input with Smiley- and File-Support for Blazor.
 ## Usage
 NuGet-Url: [Nuget.org/packages/Blazor_EmojiFilePicker](https://www.nuget.org/packages/Blazor_EmojiFilePicker)
 
-`Install-Package Blazor_EmojiFilePicker`
+1. `Install-Package WSDT.Blazor.EmojiFileInput`
 
-And add to your Startup.cs-file:
-`services.AddEmojiPicker();`
+2. And add to your **Startup.cs**-file:
+```csharp
+using EmojiPicker;
+services.AddEmojiPicker();
+```
+
+3. Add the component to your **.razor-View**:
+```csharp
+@using WSDT.EmojiFilePicker
+<EmojiInput />
+```
 
 ## Features
 * Configurable (e.g. submit-btn, file-picker, ... can be deactivated)
