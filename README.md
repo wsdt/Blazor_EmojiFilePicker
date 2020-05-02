@@ -3,13 +3,194 @@
 Bootstrap Text-Input with Smiley- and File-Support for Blazor.
 ![Regular Input](https://github.com/wsdt/Blazor_EmojiFilePicker/blob/master/docs/img/InputView.PNG "Regular Input")
 
-## Usage
-NuGet-Url: [Nuget.org/packages/Blazor_EmojiFilePicker](https://www.nuget.org/packages/Blazor_EmojiFilePicker)
+## Example projects 
+* [WSDT/RealtimeChat_WebAssembly](https://github.com/wsdt/RealtimeChat_WebAssembly)
 
-`Install-Package Blazor_EmojiFilePicker`
+## Usage ![Nuget](https://img.shields.io/nuget/v/wsdt.blazor.emojifileinput?style=plastic) 
+NuGet-Url: [Nuget.org/packages/WSDT.Blazor.EmojiFileInput](https://www.nuget.org/packages/wsdt.blazor.emojifileinput/)
 
-And add to your Startup.cs-file:
-`services.AddEmojiPicker();`
+1. `Install-Package WSDT.Blazor.EmojiFileInput`
+
+2. And add to your **Startup.cs**-file:
+```csharp
+using EmojiPicker;
+services.AddEmojiPicker();
+```
+
+3. Add the component to your **.razor-View**:
+```cshtml
+@using WSDT.EmojiFilePicker
+<EmojiInput />
+```
+
+4. Add parameters and have fun :-)
+
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Type</th>
+<th>Example</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>@bind-Message</td>
+<td>string</td>
+<td>
+  
+  ```csharp 
+  ChatMsg
+  ```
+  </td>
+<td>Binds value of input-field to your outer model for validation, form-submission, ...</td>
+</tr>
+<tr>
+  <td>MessageChanged</td>
+<td>EventCallback<string></td>
+<td>
+  
+  ```csharp 
+  null
+  ```
+  </td>
+<td>Overwrite default onMessageChanged-Callback. Basically just needed for binding.</td>
+</tr>
+<tr>
+  <td>AddFiles</td>
+<td>Action<List<string>></td>
+<td>
+  
+```csharp
+public void AddFiles(List<string> imgUris)
+    {
+        foreach (string imgUri in imgUris) {
+            AddToMsg($"<img src='{imgUri}' />");
+        }
+
+        ChatService.Send();
+        StateHasChanged();
+    }
+```
+</td>
+<td>Receive the links to uploaded files as List. Files are uploaded to the provided FileUploadRoute. In case you expect images to be uploaded you could e.g. add them to your view.
+</td>
+</tr>
+<tr>
+<td>FileUploadRoute</td>
+<td>string</td>
+<td>
+  
+  ```csharp 
+  "/api/v1/file_upload"
+  ```
+  </td>
+<td>Defines the local route to save uploaded files.</td>
+</tr>
+<tr>
+<td>Placeholder</td>
+<td>string</td>
+<td>
+  
+  ```csharp 
+  "Message"
+  ```
+  </td>
+<td>Defines the placeholder for your text-input.</td>
+</tr>
+<tr>
+<td>AddonPrepend</td>
+<td>string</td>
+<td>
+  
+  ```csharp  
+  EmojiList.Envelope
+  ``` 
+  or 
+  ```csharp 
+  "✉"
+  ```
+  </td>
+<td>Defines the Prepend-Addon for the bootstrap input.</td>
+</tr>
+<tr>
+<td>ShowFilePicker</td>
+<td>bool</td>
+<td>
+  
+  ```csharp 
+  true
+  ```
+  </td>
+<td>Should file-picker-Button and Dropzone be enabled?</td>
+</tr>
+<tr>
+<td>ShowSubmit</td>
+<td>bool</td>
+<td> 
+  
+  ```csharp 
+  true
+  ```
+  </td>
+<td>Displays a regular submit-Btn. No callback is required as this component is not nested by a form.</td>
+</tr>
+<tr>
+<td>IsSubmitDisabled</td>
+<td>bool</td>
+<td>
+  
+  ```cshtml 
+  @(!ChatService.IsConnected())
+  ```
+  </td>
+<td>If Submit-Btn is shown, then this property en- or disables the button.</td>
+</tr>
+<tr>
+<td>SubmitBtnLbl</td>
+<td>string</td>
+<td> 
+  
+  ```csharp 
+  "Send"
+  ```
+  </td>
+<td>Sets the Submit-Label, if the button is shown.</td>
+</tr>
+<tr>
+<td>SmileyBtnIcon</td>
+<td>string</td>
+<td>
+  
+  ```csharp 
+  EmojiList.Smiley
+  ``` 
+  or 
+  ```csharp 
+  "😁"
+  ```
+  </td>
+<td>Defines the smiley-button icon.</td>
+</tr>
+<tr>
+<td>FileBtnIcon</td>
+<td>string</td>
+<td>
+  
+  ```csharp 
+  EmojiList.Open_File_Folder
+  ``` 
+  or 
+  ```csharp 
+  "📎"
+  ```
+  </td>
+<td>Defines the file-button icon.</td>
+</tr>
+</tbody>
+</table>
+
 
 ## Features
 * Configurable (e.g. submit-btn, file-picker, ... can be deactivated)
