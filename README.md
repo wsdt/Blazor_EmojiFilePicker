@@ -4,7 +4,7 @@ Bootstrap Text-Input with Smiley- and File-Support for Blazor.
 ![Regular Input](https://github.com/wsdt/Blazor_EmojiFilePicker/blob/master/docs/img/InputView.PNG "Regular Input")
 
 ## Usage
-NuGet-Url: [Nuget.org/packages/Blazor_EmojiFilePicker](https://www.nuget.org/packages/Blazor_EmojiFilePicker)
+NuGet-Url: [Nuget.org/packages/WSDT.Blazor.EmojiFileInput](https://www.nuget.org/packages/wsdt.blazor.emojifileinput/)
 
 1. `Install-Package WSDT.Blazor.EmojiFileInput`
 
@@ -19,6 +19,20 @@ services.AddEmojiPicker();
 @using WSDT.EmojiFilePicker
 <EmojiInput />
 ```
+
+4. Add parameters and have fun :-)
+| Attribute        | Type | Example           | Usage  |
+| ------------- |:-------------:| -----:|
+|  @bind-Message   |  string | ChatMsg | Binds value of input-field to your outer model for validation, form-submission, ... |
+|  MessageChanged  | EventCallback<string>    | undefined | Overwrite default onMessageChanged-Callback. |
+|  AddFiles       | Action<List<string>> | ```csharp 
+  public void AddImages(List<string> imgUris)
+    {
+        foreach (string imgUri in imgUris) AddToMsg($"<img src='{imgUri}' alt='Image' class='resizedImg' />");
+
+        ChatService.Send();
+        StateHasChanged();
+    }``` | Is called  |
 
 ## Features
 * Configurable (e.g. submit-btn, file-picker, ... can be deactivated)
