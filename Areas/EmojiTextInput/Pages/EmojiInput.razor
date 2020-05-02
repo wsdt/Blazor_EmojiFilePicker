@@ -1,4 +1,5 @@
 ﻿@using EmojiPicker.Areas.EmojiTextInput.Pages
+@using Emoji
 
 
 <style>
@@ -57,12 +58,12 @@
     @if (ShowFilePicker)
     {
         <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button" @onclick="() => IsFilePickerCollapsed ^= true">&#128206;</button>
+            <button class="btn btn-outline-secondary" type="button" @onclick="() => IsFilePickerCollapsed ^= true">@FileBtnIcon</button>
         </div>
     }
 
     <div class="input-group-append popover__wrapper">
-        <button class="btn btn-outline-secondary" type="button" id="button-emojipicker">&#x1F600;</button>
+        <button class="btn btn-outline-secondary" type="button" id="button-emojipicker">@SmileyBtnIcon</button>
         <div class="popover__content">
             <EmojiPanel AddEmoji="AddEmoji" />
         </div>
@@ -71,7 +72,7 @@
     @if (ShowSubmit)
     {
         <div class="input-group-append">
-            <button type="submit" class="btn btn-outline-info text-center" disabled="@IsSubmitDisabled">Send</button>
+            <button type="submit" class="btn btn-outline-info text-center" disabled="@IsSubmitDisabled">@SubmitBtnLbl</button>
         </div>
     }
 
@@ -110,7 +111,7 @@
     public string Placeholder { get; set; }
 
     [Parameter]
-    public string AddonPrepend { get; set; }
+    public string AddonPrepend { get; set; } = Emoji.Envelope;
 
     [Parameter]
     public bool ShowFilePicker { get; set; } = true;
@@ -120,6 +121,15 @@
 
     [Parameter]
     public bool IsSubmitDisabled { get; set; } = false;
+
+    [Parameter]
+    public string SubmitBtnLbl { get; set; } = "Send";
+
+    [Parameter]
+    public string SmileyBtnIcon { get; set; } = Emoji.Smiley; //"&#x1F600";
+
+    [Parameter]
+    public string FileBtnIcon { get; set; } = Emoji.Open_File_Folder; // "&#128206;";
 
     protected void AddEmoji(string emoji) => Message += emoji;
 
