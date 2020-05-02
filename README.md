@@ -3,7 +3,7 @@
 Bootstrap Text-Input with Smiley- and File-Support for Blazor.
 ![Regular Input](https://github.com/wsdt/Blazor_EmojiFilePicker/blob/master/docs/img/InputView.PNG "Regular Input")
 
-## Usage
+## Usage ![Nuget](https://img.shields.io/nuget/v/wsdt.blazor.emojifileinput?style=plastic) 
 NuGet-Url: [Nuget.org/packages/WSDT.Blazor.EmojiFileInput](https://www.nuget.org/packages/wsdt.blazor.emojifileinput/)
 
 1. `Install-Package WSDT.Blazor.EmojiFileInput`
