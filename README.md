@@ -63,7 +63,7 @@ services.AddEmojiPicker();
 public void AddFiles(List<string> imgUris)
     {
         foreach (string imgUri in imgUris) {
-            AddToMsg($"<img src='{imgUri}' alt='Image' />");
+            AddToMsg($"<img src='{imgUri}' />");
         }
 
         ChatService.Send();
