@@ -25,14 +25,7 @@ services.AddEmojiPicker();
 | ------------- |:-------------:| -----:|
 |  @bind-Message   |  string | ChatMsg | Binds value of input-field to your outer model for validation, form-submission, ... |
 |  MessageChanged  | EventCallback<string>    | undefined | Overwrite default onMessageChanged-Callback. |
-|  AddFiles       | Action<List<string>> | ```csharp 
-  public void AddImages(List<string> imgUris)
-    {
-        foreach (string imgUri in imgUris) AddToMsg($"<img src='{imgUri}' alt='Image' class='resizedImg' />");
-
-        ChatService.Send();
-        StateHasChanged();
-    }``` | Is called  |
+|  AddFiles       | Action<List<string>> | s | Is called  |
 
 ## Features
 * Configurable (e.g. submit-btn, file-picker, ... can be deactivated)
