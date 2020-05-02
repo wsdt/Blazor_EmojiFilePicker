@@ -50,7 +50,7 @@
 
 @code {
     [Parameter] public string FileUploadRoute { get; set; }
-    [Parameter] public Action<List<string>> AddImages { get; set; }
+    [Parameter] public Action<List<string>> AddFiles { get; set; }
 
     ElementReference dropTargetInput;
     IFileReaderRef ipReference;
@@ -133,7 +133,7 @@
             this.StateHasChanged();
         }
 
-        this.AddImages(imgUriList);
+        this.AddFiles(imgUriList);
     }
 
     private async Task<string> UploadFile(byte[] img)

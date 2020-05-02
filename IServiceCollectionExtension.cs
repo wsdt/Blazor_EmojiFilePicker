@@ -1,9 +1,9 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using Blazor.FileReader;
+﻿using Blazor.FileReader;
 using Microsoft.AspNetCore.Components;
-using System.Net.Http;
+using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Linq;
+using System.Net.Http;
 
 namespace EmojiPicker
 {

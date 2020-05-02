@@ -606,7 +606,7 @@
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
-    "version": "0.0.5",
+    "version": "0.0.7",
     "restore": {
       "projectUniqueName": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\SignalR\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj",
       "projectName": "WSDT.Blazor.EmojiFileInput",

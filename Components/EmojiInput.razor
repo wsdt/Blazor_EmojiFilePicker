@@ -79,7 +79,7 @@
 </div>
 
 <div style="@(IsFilePickerCollapsed ? "display:none;" : "")">
-    <FileUploader AddImages="AddImages" FileUploadRoute="@FileUploadRoute" />
+    <FileUploader AddFiles="AddFiles" FileUploadRoute="@FileUploadRoute" />
 </div>
 
 
@@ -87,7 +87,7 @@
     private string _message;
 
     [Parameter]
-    public string FileUploadRoute { get; set; }
+    public string FileUploadRoute { get; set; } = "/";
 
     [Parameter]
     public string Message
@@ -105,10 +105,10 @@
     public EventCallback<string> MessageChanged { get; set; }
 
     [Parameter]
-    public Action<List<string>> AddImages { get; set; }
+    public Action<List<string>> AddFiles { get; set; } = (List<string> filesSrc) => Console.WriteLine("EmojiInput: You way want to add an AddImages()-Callback.");
 
     [Parameter]
-    public string Placeholder { get; set; }
+    public string Placeholder { get; set; } = "Your message";
 
     [Parameter]
     public string AddonPrepend { get; set; } = EmojiList.Envelope;
