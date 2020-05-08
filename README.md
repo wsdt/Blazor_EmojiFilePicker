@@ -6,7 +6,7 @@ Bootstrap Text-Input with Smiley- and File-Support for Blazor.
 ## Example projects 
 * [WSDT/RealtimeChat_WebAssembly](https://github.com/wsdt/RealtimeChat_WebAssembly)
 
-## Usage ![Nuget](https://img.shields.io/nuget/v/wsdt.blazor.emojifileinput?style=plastic) 
+## Usage ![Nuget](https://img.shields.io/nuget/v/wsdt.blazor.emojifileinput?style=plastic) ![Nuget](https://img.shields.io/nuget/dt/WSDT.Blazor.EmojiFileInput)
 NuGet-Url: [Nuget.org/packages/WSDT.Blazor.EmojiFileInput](https://www.nuget.org/packages/wsdt.blazor.emojifileinput/)
 
 1. `Install-Package WSDT.Blazor.EmojiFileInput`
