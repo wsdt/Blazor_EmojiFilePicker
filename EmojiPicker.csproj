@@ -7,7 +7,7 @@
 		<PackageId>WSDT.Blazor.EmojiFileInput</PackageId>
 		<Title>Emoji- and Filepicker for Blazor</Title>
 		<Description>Provides a simple Bootstrap Text-Input field with Smiley- and File-Support.</Description>
-		<Version>0.0.7</Version>
+		<Version>0.0.8</Version>
 		<Authors>Kevin Riedl: github.com/wsdt</Authors>
 		<Company>Self-Employed</Company>
 		<RepositoryUrl>https://github.com/wsdt/Blazor_EmojiFilePicker</RepositoryUrl>
