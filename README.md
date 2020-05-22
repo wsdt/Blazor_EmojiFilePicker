@@ -188,6 +188,106 @@ public void AddFiles(List<string> imgUris)
   </td>
 <td>Defines the file-button icon.</td>
 </tr>
+<tr>
+<td>StyleTextInputContainer</td>
+<td>string</td>
+<td>
+  ```css 
+  "display:inline-block;width:50px;"
+  ```
+  </td>
+<td>Defines inline-style for the surrounding div of our text-input.</td>
+</tr>
+<tr>
+<td>StyleTextInput</td>
+<td>string</td>
+<td>
+  ```css 
+  "background-color:#555;"
+  ```
+  </td>
+<td>Defines inline-style of our text-input.</td>
+</tr>
+<tr>
+<td>StyleFileBtnContainer</td>
+<td>string</td>
+<td>
+  ```css 
+  "width:100px;"
+  ```
+  </td>
+<td>Defines inline-style of the surrounding div of the file-button.</td>
+</tr>
+<tr>
+<td>StyleFileBtn</td>
+<td>string</td>
+<td>
+  ```css 
+  "color:#fff;"
+  ```
+  </td>
+<td>Defines inline-style of our file-button.</td>
+</tr>
+<tr>
+<td>StyleDropzone</td>
+<td>string</td>
+<td>
+  ```css 
+  "background-color:#cc3f00;"
+  ```
+  </td>
+<td>Defines inline-style of our file-dropzone.</td>
+</tr>
+<tr>
+<td>StyleEmojiBtnContainer</td>
+<td>string</td>
+<td>
+  ```css 
+  "width:25px;"
+  ```
+  </td>
+<td>Defines inline-style of the surrounding div of our emoji-button.</td>
+</tr>
+<tr>
+<td>StyleEmojiBtn</td>
+<td>string</td>
+<td>
+  ```css 
+  "font-size:18px;"
+  ```
+  </td>
+<td>Defines inline-style of our emoji-button.</td>
+</tr>
+<tr>
+<td>StyleEmojiPopoverContainer</td>
+<td>string</td>
+<td>
+  ```css 
+  "font-size:18px;"
+  ```
+  </td>
+<td>Defines inline-style of the surrounding div of our smiley-popover.</td>
+</tr>
+<tr>
+<td>StyleBtnSubmitContainer</td>
+<td>string</td>
+<td>
+  ```css 
+  "display:inline;text-align:justify;"
+  ```
+  </td>
+<td>Defines inline-style of the surrounding div of our submit-button.</td>
+</tr>
+<tr>
+<td>StyleBtnSubmit</td>
+<td>string</td>
+<td>
+  ```css 
+  "font-size:10px;"
+  ```
+  </td>
+<td>Defines inline-style of our submit-button.</td>
+</tr>
 </tbody>
 </table>
 
