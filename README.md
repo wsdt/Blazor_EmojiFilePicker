@@ -25,7 +25,7 @@ services.AddEmojiPicker();
 
 4. Add parameters and have fun :-)
 
-<table style="width:85%;">
+<table style="width:500px;">
 <thead>
 <tr>
 <th>Attribute</th>
