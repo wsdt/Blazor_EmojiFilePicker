@@ -192,8 +192,8 @@ public void AddFiles(List<string> imgUris)
 <td>StyleTextInputContainer</td>
 <td>string</td>
 <td>
-  ```css 
-  "display:inline-block;width:50px;"
+  ```css
+  display:inline-block;width:50px;
   ```
   </td>
 <td>Defines inline-style for the surrounding div of our text-input.</td>
@@ -202,9 +202,7 @@ public void AddFiles(List<string> imgUris)
 <td>StyleTextInput</td>
 <td>string</td>
 <td>
-  ```css 
-  "background-color:#555;"
-  ```
+  ```css "background-color:#555; ```
   </td>
 <td>Defines inline-style of our text-input.</td>
 </tr>
