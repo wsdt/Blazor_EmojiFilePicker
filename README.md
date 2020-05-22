@@ -192,6 +192,7 @@ public void AddFiles(List<string> imgUris)
 <td>StyleTextInputContainer</td>
 <td>string</td>
 <td>
+  
   ```css
   display:inline-block;width:50px;
   ```
@@ -202,7 +203,10 @@ public void AddFiles(List<string> imgUris)
 <td>StyleTextInput</td>
 <td>string</td>
 <td>
-  ```css "background-color:#555; ```
+  
+  ```css 
+  background-color:#555; 
+  ```
   </td>
 <td>Defines inline-style of our text-input.</td>
 </tr>
@@ -210,8 +214,9 @@ public void AddFiles(List<string> imgUris)
 <td>StyleFileBtnContainer</td>
 <td>string</td>
 <td>
+  
   ```css 
-  "width:100px;"
+  width:100px;
   ```
   </td>
 <td>Defines inline-style of the surrounding div of the file-button.</td>
@@ -220,8 +225,9 @@ public void AddFiles(List<string> imgUris)
 <td>StyleFileBtn</td>
 <td>string</td>
 <td>
+  
   ```css 
-  "color:#fff;"
+  color:#fff;
   ```
   </td>
 <td>Defines inline-style of our file-button.</td>
@@ -230,8 +236,9 @@ public void AddFiles(List<string> imgUris)
 <td>StyleDropzone</td>
 <td>string</td>
 <td>
+  
   ```css 
-  "background-color:#cc3f00;"
+  background-color:#cc3f00;
   ```
   </td>
 <td>Defines inline-style of our file-dropzone.</td>
@@ -240,8 +247,9 @@ public void AddFiles(List<string> imgUris)
 <td>StyleEmojiBtnContainer</td>
 <td>string</td>
 <td>
+  
   ```css 
-  "width:25px;"
+  width:25px;
   ```
   </td>
 <td>Defines inline-style of the surrounding div of our emoji-button.</td>
@@ -250,8 +258,9 @@ public void AddFiles(List<string> imgUris)
 <td>StyleEmojiBtn</td>
 <td>string</td>
 <td>
+  
   ```css 
-  "font-size:18px;"
+  font-size:18px;
   ```
   </td>
 <td>Defines inline-style of our emoji-button.</td>
@@ -260,8 +269,9 @@ public void AddFiles(List<string> imgUris)
 <td>StyleEmojiPopoverContainer</td>
 <td>string</td>
 <td>
+  
   ```css 
-  "font-size:18px;"
+  font-size:18px;
   ```
   </td>
 <td>Defines inline-style of the surrounding div of our smiley-popover.</td>
@@ -270,8 +280,9 @@ public void AddFiles(List<string> imgUris)
 <td>StyleBtnSubmitContainer</td>
 <td>string</td>
 <td>
+  
   ```css 
-  "display:inline;text-align:justify;"
+  display:inline;text-align:justify;
   ```
   </td>
 <td>Defines inline-style of the surrounding div of our submit-button.</td>
@@ -280,8 +291,9 @@ public void AddFiles(List<string> imgUris)
 <td>StyleBtnSubmit</td>
 <td>string</td>
 <td>
+  
   ```css 
-  "font-size:10px;"
+  font-size:10px;
   ```
   </td>
 <td>Defines inline-style of our submit-button.</td>
