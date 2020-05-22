@@ -62,10 +62,10 @@ services.AddEmojiPicker();
 <td>
   
 ```csharp
-public void AddFiles(List<string> imgUris)
+public void AddFiles(List<string> imgs)
     {
-        foreach (string imgUri in imgUris) {
-            AddToMsg($"<img src='{imgUri}' />");
+        foreach (string i in imgs) {
+            AddToMsg($"<img src='{i}'/>");
         }
 
         ChatService.Send();
