@@ -1,0 +1,20 @@
+﻿@namespace WSDT.EmojiFilePicker.Sub
+@using WSDT.EmojiFilePicker
+@using System.Reflection
+@using WSDT.EmojiFilePicker.Sub
+
+<EmojiPanel>
+    @foreach (List<string> pageLst in EmojiList.EmojiesPerTab)
+    {
+    <EmojiPanelTab TabTitle="@pageLst[0]">
+        @foreach (string emoji in pageLst)
+        {
+        <EmojiBtn AddEmoji="AddEmoji" Emoji="@emoji" />
+        }
+    </EmojiPanelTab>
+    }
+</EmojiPanel>
+
+@code {
+    [Parameter] public EventCallback<string> AddEmoji { get; set; }
+}

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>WSDT.Blazor.EmojiFileInput</id>
-    <version>0.0.8</version>
+    <version>0.1.0</version>
     <title>Emoji- and Filepicker for Blazor</title>
     <authors>Kevin Riedl: github.com/wsdt</authors>
     <owners>Kevin Riedl: github.com/wsdt</owners>
@@ -10,7 +10,7 @@
     <license type="expression">GPL-3.0-or-later</license>
     <licenseUrl>https://licenses.nuget.org/GPL-3.0-or-later</licenseUrl>
     <description>Provides a simple Bootstrap Text-Input field with Smiley- and File-Support.</description>
-    <releaseNotes>Simple Blazor Emoji-File-Input designed with Bootstrap.</releaseNotes>
+    <releaseNotes>Removed reflection procedure to improve efficiency. Changed emoji-tab groups.</releaseNotes>
     <copyright>WSDT - Riedl Kevin</copyright>
     <tags>Blazor Emoji Smiley Input Text File Image Picker Bootstrap</tags>
     <repository url="https://github.com/wsdt/Blazor_EmojiFilePicker" />

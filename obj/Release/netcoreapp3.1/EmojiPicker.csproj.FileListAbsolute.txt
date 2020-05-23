@@ -54,3 +54,8 @@ C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\EmojiPicker\ob
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\EmojiPicker\obj\Release\netcoreapp3.1\staticwebassets\EmojiPicker.StaticWebAssets.xml
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\EmojiPicker\obj\Release\netcoreapp3.1\EmojiPicker.dll
 C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\EmojiPicker\obj\Release\netcoreapp3.1\EmojiPicker.pdb
+C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\EmojiPicker\bin\Release\netcoreapp3.1\EmojiPicker.xml
+C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\EmojiPicker\obj\Release\netcoreapp3.1\RazorDeclaration\Components\SubComponents\EmojiPanelTab.razor.g.cs
+C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\EmojiPicker\obj\Release\netcoreapp3.1\Razor\Components\SubComponents\EmojiPanelTab.razor.g.cs
+C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\EmojiPicker\obj\Release\netcoreapp3.1\RazorDeclaration\Components\SubComponents\EmojiPanelContainer.razor.g.cs
+C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\EmojiPicker\obj\Release\netcoreapp3.1\Razor\Components\SubComponents\EmojiPanelContainer.razor.g.cs

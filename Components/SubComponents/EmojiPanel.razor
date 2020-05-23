@@ -10,21 +10,41 @@
     }
 </style>
 
-<div class="scrollable">
-
-
-
-    @foreach (string emoji in emojiInstance.GetAllConstants())
-    {
-
-        <EmojiBtn AddEmoji="AddEmoji" Emoji="@emoji" />
-    }
-
-</div>
+<CascadingValue Value="this">
+    <div class="btn-group" role="group" style="margin-bottom:5px;">
+        @foreach (EmojiPanelTab tabPage in Pages)
+        {
+            <button type="button" class="btn-group @GetButtonClass(tabPage)"
+                    @onclick=@(()=>ActivatePage(tabPage))>
+                @tabPage.TabTitle
+            </button>
+        }
+    </div>
+    <div class="scrollable">
+        @ChildContent
+    </div>
+</CascadingValue>
 
 @code {
-    [Parameter]
-    public EventCallback<string> AddEmoji { get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
 
-    private static EmojiList emojiInstance = new EmojiList(); // needed for reflection
+    public EmojiPanelTab ActivePage { get; set; }
+    List<EmojiPanelTab> Pages = new List<EmojiPanelTab>();
+
+    internal void AddPage(EmojiPanelTab tabPage)
+    {
+        Pages.Add(tabPage);
+        if (Pages.Count == 1) ActivePage = tabPage;
+        StateHasChanged();
+    }
+
+    string GetButtonClass(EmojiPanelTab page)
+    {
+        return page == ActivePage ? "btn-dark" : "btn-light";
+    }
+
+    void ActivatePage(EmojiPanelTab page)
+    {
+        ActivePage = page;
+    }
 }

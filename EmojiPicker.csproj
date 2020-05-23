@@ -7,7 +7,7 @@
 		<PackageId>WSDT.Blazor.EmojiFileInput</PackageId>
 		<Title>Emoji- and Filepicker for Blazor</Title>
 		<Description>Provides a simple Bootstrap Text-Input field with Smiley- and File-Support.</Description>
-		<Version>0.0.8</Version>
+		<Version>0.1.0</Version>
 		<Authors>Kevin Riedl: github.com/wsdt</Authors>
 		<Company>Self-Employed</Company>
 		<RepositoryUrl>https://github.com/wsdt/Blazor_EmojiFilePicker</RepositoryUrl>
@@ -16,8 +16,17 @@
 		<Copyright>WSDT - Riedl Kevin</Copyright>
 		<PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
 		<PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
-		
+
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		
+		<NeutralLanguage>en-AT</NeutralLanguage>
+		
+		<PackageReleaseNotes>Removed reflection procedure to improve efficiency. Changed emoji-tab groups.</PackageReleaseNotes>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <DocumentationFile>C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\EmojiPicker\EmojiPicker.xml</DocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>
