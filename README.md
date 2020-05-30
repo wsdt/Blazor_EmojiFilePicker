@@ -199,6 +199,28 @@ public void AddFiles(List<string> imgs)
 <td>Defines the file-button icon.</td>
 </tr>
 <tr>
+<td>ClassEmojiTabBtnActive</td>
+<td>string</td>
+<td>
+  
+  ```css
+  btn-dark
+  ```
+  </td>
+<td>Defines the css-class(es) for the active tab-button within the emoji-panel.</td>
+</tr>
+<tr>
+<td>ClassEmojiTabBtnInActive</td>
+<td>string</td>
+<td>
+  
+  ```css
+  btn-light
+  ```
+  </td>
+<td>Defines the css-class(es) for the inactive tab-buttons within the emoji-panel.</td>
+</tr>
+<tr>
 <td>StyleTextInputContainer</td>
 <td>string</td>
 <td>
