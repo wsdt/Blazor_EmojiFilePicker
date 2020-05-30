@@ -1,7 +1,6 @@
 ﻿@namespace WSDT.EmojiFilePicker
 @using WSDT.EmojiFilePicker.Sub
 
-
 <style>
     /* Popover styling */
     .popover__wrapper {
@@ -53,7 +52,8 @@
             <span class="input-group-text" id="addon-msg">@AddonPrepend</span>
         </div>
     }
-    <input type="text" class="form-control" style="@StyleTextInput" placeholder="@Placeholder" aria-label="@Placeholder" aria-describedby="button-emojipicker" @bind="Message">
+    <input type="text" class="form-control" style="@StyleTextInput" placeholder="@Placeholder" aria-label="@Placeholder" 
+           aria-describedby="button-emojipicker" @bind="Message" autocomplete="@AutoComplete">
 
     @if (ShowFilePicker)
     {
@@ -83,7 +83,7 @@
 
 
 @code {
-        #region fields
+    #region fields
     private string _message;
     #endregion
 
@@ -144,6 +144,9 @@
 
     /// <summary>HTML-Entity, icon or text for file button.</summary>
     [Parameter] public string FileBtnIcon { get; set; } = "📂";
+
+    /// <summary>Determines if input-autocomplete is on|off.</summary>
+    [Parameter] public string AutoComplete { get; set; } = "on";
     #endregion
 
     #region methods

@@ -99,6 +99,17 @@ public void AddFiles(List<string> imgs)
 <td>Defines the placeholder for your text-input.</td>
 </tr>
 <tr>
+<td>AutoComplete</td>
+<td>string</td>
+<td>
+  
+  ```csharp 
+  "on" | "off"
+  ```
+  </td>
+<td>Defines whether HTML autocompletion is enabled.</td>
+</tr>
+<tr>
 <td>AddonPrepend</td>
 <td>string</td>
 <td>

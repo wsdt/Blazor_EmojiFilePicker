@@ -40,5 +40,8 @@
         <member name="P:WSDT.EmojiFilePicker.EmojiInput.FileBtnIcon">
             <summary>HTML-Entity, icon or text for file button.</summary>
         </member>
+        <member name="P:WSDT.EmojiFilePicker.EmojiInput.AutoComplete">
+            <summary>Determines if input-autocomplete is on|off.</summary>
+        </member>
     </members>
 </doc>
