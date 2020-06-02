@@ -198,6 +198,22 @@ public void AddFiles(List<string> imgs)
   </td>
 <td>Defines the file-button icon.</td>
 </tr>
+
+<tr>
+<td>CustomSymbols</td>
+<td>List&lt;string&gt;</td>
+<td>
+  
+  ```csharp 
+  new List<string>()
+    {
+        "⺀", "⽥", "⽨", "⽣", "㣕"
+    }
+  ```
+  </td>
+<td>Add custom symbols to create a new tab at the end of the emoji picker.</td>
+</tr>
+
 <tr>
 <td>ClassEmojiTabBtnActive</td>
 <td>string</td>
