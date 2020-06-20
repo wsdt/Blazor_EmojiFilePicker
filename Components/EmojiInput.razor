@@ -1,7 +1,14 @@
 ﻿@namespace WSDT.EmojiFilePicker
 @using WSDT.EmojiFilePicker.Sub
+@using Markdig
 
 <style>
+    .messagePreviewContainer {
+        background-color: #eee;
+        padding: 10px;
+        border-radius: 15px;
+    }
+
     /* Popover styling */
     .popover__wrapper {
         position: relative;
@@ -52,8 +59,10 @@
             <span class="input-group-text" id="addon-msg">@AddonPrepend</span>
         </div>
     }
-    <input type="text" class="form-control" style="@StyleTextInput" placeholder="@Placeholder" aria-label="@Placeholder" 
-           aria-describedby="button-emojipicker" @bind="Message" autocomplete="@AutoComplete">
+    <input type="text" class="form-control" style="@StyleTextInput" placeholder="@Placeholder" aria-label="@Placeholder"
+           aria-describedby="button-emojipicker" @bind="Message" @bind:event="oninput" autocomplete="@AutoComplete"
+           @onkeyup="@(() => this.PreviewMessageUpdated(Message))"
+           @onfocus="@(() => this.setInputFocused(true))" @onblur="@(() => this.setInputFocused(false))">
 
     @if (ShowFilePicker)
     {
@@ -65,8 +74,8 @@
     <div class="input-group-append popover__wrapper" style="@StyleEmojiBtnContainer">
         <button class="btn btn-outline-secondary" style="@StyleEmojiBtn" type="button" id="button-emojipicker">@SmileyBtnIcon</button>
         <div class="popover__content" style="@StyleEmojiPopoverContainer">
-           <EmojiPanelContainer AddEmoji="@AddEmoji" ClassEmojiTabBtnActive="@ClassEmojiTabBtnActive" ClassEmojiTabBtnInActive="@ClassEmojiTabBtnInActive"
-                                EmojiList="@AllEmojies"/>
+            <EmojiPanelContainer AddEmoji="@AddEmoji" ClassEmojiTabBtnActive="@ClassEmojiTabBtnActive" ClassEmojiTabBtnInActive="@ClassEmojiTabBtnInActive"
+                                 EmojiList="@AllEmojies" />
         </div>
     </div>
     @if (ShowSubmit)
@@ -82,13 +91,25 @@
     <FileUploader AddFiles="AddFiles" FileUploadRoute="@FileUploadRoute" />
 </div>
 
+@if (ShowPreview && _isInputFocused && PreviewMessage != null)
+{
+    <div class="messagePreviewContainer" style="@StylePreviewContainer">
+       @((MarkupString) this.PreviewMessage)
+    </div>
+}
+
 
 @code {
     #region fields
     private string _message;
+    private bool _isInputFocused = false;
     #endregion
 
     #region properties
+    // Message used by preview container
+    private string PreviewMessage { get; set; }
+
+    [Parameter] public string StylePreviewContainer { get; set; } = "";
     [Parameter] public string StyleTextInputContainer { get; set; } = "";
     [Parameter] public string StyleTextInput { get; set; } = "";
     [Parameter] public string StyleFileBtnContainer { get; set; } = "";
@@ -99,6 +120,9 @@
     [Parameter] public string StyleEmojiPopoverContainer { get; set; } = "";
     [Parameter] public string StyleBtnSubmitContainer { get; set; } = "";
     [Parameter] public string StyleBtnSubmit { get; set; } = "";
+
+    /// <summary>Enable message preview. Useful for HTML/Markdown preview.</summary>
+    [Parameter] public bool ShowPreview { get; set; } = true;
 
     /// <summary>Defines the css-classes for the tab button within the emoji panel (state: active)</summary>
     [Parameter] public string ClassEmojiTabBtnActive { get; set; } = "btn-dark";
@@ -122,6 +146,7 @@
             if (_message == value) return;
             _message = value;
             MessageChanged.InvokeAsync(value);
+            this.PreviewMessageUpdated(value);
         }
     }
 
@@ -163,6 +188,14 @@
     protected void AddEmoji(string emoji) => Message += emoji;
     private bool IsFilePickerCollapsed { get; set; } = true;
 
+    private void PreviewMessageUpdated(string newValue)
+    {
+        if (newValue != null)
+        {
+            this.PreviewMessage = Markdown.ToHtml(newValue);
+            this.StateHasChanged();
+        }
+    }
 
     protected override void OnInitialized()
     {
@@ -173,6 +206,12 @@
     }
 
     private List<List<string>> AllEmojies { get; set; } = EmojiList.EmojiesPerTab;
+
+    private void setInputFocused(bool state)
+    {
+        this._isInputFocused = state;
+        this.PreviewMessageUpdated(this.Message);
+    }
     #endregion
 }
 

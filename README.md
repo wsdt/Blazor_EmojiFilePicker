@@ -215,6 +215,31 @@ public void AddFiles(List<string> imgs)
 </tr>
 
 <tr>
+<td>ShowPreview</td>
+<td>bool</td>
+<td>
+  
+  ```csharp 
+    true
+  ```
+  </td>
+<td>Will show a markdown & html live-preview of the inputted message, if true.</td>
+</tr>
+
+
+<tr>
+<td>StylePreviewContainer</td>
+<td>string</td>
+<td>
+  
+  ```css
+  color: #ff0000;
+  ```
+  </td>
+<td>Defines the css-style(s) for the message-preview container.</td>
+</tr>
+
+<tr>
 <td>ClassEmojiTabBtnActive</td>
 <td>string</td>
 <td>

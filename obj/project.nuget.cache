@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "JAUqleDK4nMBnH1ZHo0LqQEZvHPmx1mF+QkOnTamrNXsEnHeGuDWN5t4DjXSypGWYdSWeqT6w9J6TkxIA/CpQw==",
+  "dgSpecHash": "dvv2nFa8Sgoc9PhrhA4FvxEYscCQ6C7G1lW2Og9/Me/YxqygszCtF0FSsOEsfANHeimalglu3CTpJvf0L6KqRw==",
   "success": true,
   "projectFilePath": "C:\\Users\\WSDT\\Desktop\\C#_.NET\\KevinRiedl\\RealtimeChat_WebAssembly\\EmojiPicker\\EmojiPicker.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\WSDT\\.nuget\\packages\\bootstrap\\4.4.1\\bootstrap.4.4.1.nupkg.sha512",
     "C:\\Users\\WSDT\\.nuget\\packages\\jquery\\3.0.0\\jquery.3.0.0.nupkg.sha512",
+    "C:\\Users\\WSDT\\.nuget\\packages\\markdig\\0.20.0\\markdig.0.20.0.nupkg.sha512",
     "C:\\Users\\WSDT\\.nuget\\packages\\microsoft.aspnetcore.authorization\\3.1.3\\microsoft.aspnetcore.authorization.3.1.3.nupkg.sha512",
     "C:\\Users\\WSDT\\.nuget\\packages\\microsoft.aspnetcore.components\\3.1.3\\microsoft.aspnetcore.components.3.1.3.nupkg.sha512",
     "C:\\Users\\WSDT\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\3.1.3\\microsoft.aspnetcore.components.analyzers.3.1.3.nupkg.sha512",

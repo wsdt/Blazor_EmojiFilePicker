@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "EmojiPicker/0.1.2": {
         "dependencies": {
+          "Markdig": "0.20.0",
           "Microsoft.Extensions.DependencyInjection": "3.1.3",
           "Tewr.Blazor.FileReader": "1.5.0.20109",
           "bootstrap": "4.4.1",
@@ -304,6 +305,17 @@
         }
       },
       "jQuery/3.0.0": {},
+      "Markdig/0.20.0": {
+        "runtime": {
+          "lib/netcoreapp3.1/Markdig.dll": {
+            "assemblyVersion": "0.20.0.0",
+            "fileVersion": "0.20.0.0"
+          }
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Markdig.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/3.1.3": {
         "dependencies": {
           "Microsoft.AspNetCore.Metadata": "3.1.3",
@@ -2072,6 +2084,13 @@
       "sha512": "sha512-xFfntV19HzCtKdJWOp/XT9PUY3SslokTDDLFJZdBug36j1XVhw1+vPQ/n7Gd5y+jdpesn5B1m1yn1qIUq57jlA==",
       "path": "jquery/3.0.0",
       "hashPath": "jquery.3.0.0.nupkg.sha512"
+    },
+    "Markdig/0.20.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-49Kuof5GSRdTnXlDvZ/+ucABl9l5oPA/jpIkFK8Zcnc0NiETj+rf5f4xoNr52a4Hs1DlcJmrRHv4xvZHMxnDFQ==",
+      "path": "markdig/0.20.0",
+      "hashPath": "markdig.0.20.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/3.1.3": {
       "type": "package",
