@@ -78,6 +78,13 @@
                                  EmojiList="@AllEmojies" />
         </div>
     </div>
+    @if (ShowClearBtn)
+    {
+        <div class="input-group-append" style="@StyleBtnClearContainer">
+            <button type="reset" class="btn btn-outline-info text-center" style="@StyleBtnClear" @onclick="() => this.Message=string.Empty">@ClearBtnLbl</button>
+        </div>
+    }
+
     @if (ShowSubmit)
     {
         <div class="input-group-append" style="@StyleBtnSubmitContainer">
@@ -118,8 +125,16 @@
     [Parameter] public string StyleEmojiBtnContainer { get; set; } = "";
     [Parameter] public string StyleEmojiBtn { get; set; } = "";
     [Parameter] public string StyleEmojiPopoverContainer { get; set; } = "";
+    [Parameter] public string StyleBtnClearContainer { get; set; } = ""; 
+    [Parameter] public string StyleBtnClear { get; set; } = ""; 
     [Parameter] public string StyleBtnSubmitContainer { get; set; } = "";
     [Parameter] public string StyleBtnSubmit { get; set; } = "";
+
+    /// <summary>Display clear button</summary>
+    [Parameter] public bool ShowClearBtn { get; set; } = true; 
+    
+    /// <summary>Reset/Clear Button label. Only takes effect when ShowClearBtn is true.</summary>
+    [Parameter] public string ClearBtnLbl { get; set; } = "Clear"; // NEW
 
     /// <summary>Enable message preview. Useful for HTML/Markdown preview.</summary>
     [Parameter] public bool ShowPreview { get; set; } = true;

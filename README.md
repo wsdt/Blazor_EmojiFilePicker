@@ -136,6 +136,28 @@ public void AddFiles(List<string> imgs)
 <td>Should file-picker-Button and Dropzone be enabled?</td>
 </tr>
 <tr>
+<td>ShowClearBtn</td>
+<td>bool</td>
+<td> 
+  
+  ```csharp 
+  true
+  ```
+  </td>
+<td>Displays a regular clear-Btn.</td>
+</tr>
+<tr>
+<td>ClearBtnLbl</td>
+<td>string</td>
+<td> 
+  
+  ```csharp 
+  "Reset"
+  ```
+  </td>
+<td>Label to show on the clear-button.</td>
+</tr>
+<tr>
 <td>ShowSubmit</td>
 <td>bool</td>
 <td> 
@@ -226,6 +248,29 @@ public void AddFiles(List<string> imgs)
 <td>Will show a markdown & html live-preview of the inputted message, if true.</td>
 </tr>
 
+<tr>
+<td>StyleBtnClearContainer</td>
+<td>string</td>
+<td>
+  
+  ```css
+  width: 100px;
+  ```
+  </td>
+<td>Defines the css-style(s) the clear-btn container.</td>
+</tr>
+
+<tr>
+<td>StyleBtnClear</td>
+<td>string</td>
+<td>
+  
+  ```css
+  color: #ff0000;
+  ```
+  </td>
+<td>Defines the css-style(s) for the clear-btn.</td>
+</tr>
 
 <tr>
 <td>StylePreviewContainer</td>

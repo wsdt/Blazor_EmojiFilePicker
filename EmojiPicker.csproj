@@ -7,7 +7,7 @@
 		<PackageId>WSDT.Blazor.EmojiFileInput</PackageId>
 		<Title>Emoji- and Filepicker for Blazor</Title>
 		<Description>Provides a simple Bootstrap Text-Input field with Smiley- and File-Support.</Description>
-		<Version>0.1.2</Version>
+		<Version>1.1.0</Version>
 		<Authors>Kevin Riedl: github.com/wsdt</Authors>
 		<Company>Self-Employed</Company>
 		<RepositoryUrl>https://github.com/wsdt/Blazor_EmojiFilePicker</RepositoryUrl>
@@ -22,7 +22,7 @@
 		
 		<NeutralLanguage>en-AT</NeutralLanguage>
 		
-		<PackageReleaseNotes>Custom symbols can now be added at the end of the emoji-tab menu.</PackageReleaseNotes>
+		<PackageReleaseNotes>Added clear/reset button.</PackageReleaseNotes>
 	</PropertyGroup>
 
 	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
