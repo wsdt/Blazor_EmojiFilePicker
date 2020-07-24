@@ -88,6 +88,17 @@ public void AddFiles(List<string> imgs)
 <td>Defines the local route to save uploaded files.</td>
 </tr>
 <tr>
+<td>CancellationToken</td>
+<td>CancellationToken</td>
+<td>
+  
+  ```csharp 
+  new CancellationTokenSource().Token
+  ```
+  </td>
+<td>Optional cancellation token for file upload route.</td>
+</tr>
+<tr>
 <td>Placeholder</td>
 <td>string</td>
 <td>

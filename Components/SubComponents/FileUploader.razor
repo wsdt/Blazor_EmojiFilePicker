@@ -3,6 +3,7 @@
 @using System.IO;
 @using Blazor.FileReader
 @using System.Net.Http
+@using System.Threading
 
 @inject HttpClient Http
 @inject IFileReaderService fileReaderService;
@@ -49,14 +50,15 @@
 
 
 @code {
-    [Parameter] public string FileUploadRoute { get; set; }
-    [Parameter] public Action<List<string>> AddFiles { get; set; }
+        [Parameter] public string FileUploadRoute { get; set; }
+        [Parameter] public Action<List<string>> AddFiles { get; set; }
+        [Parameter] public CancellationToken CancellationToken { get; set; }
 
-    ElementReference dropTargetInput;
-    IFileReaderRef ipReference;
+        ElementReference dropTargetInput;
+        IFileReaderRef ipReference;
 
-    const string dropTargetDragClass = "droptarget-drag";
-    const string dropTargetClass = "droptarget";
+        const string dropTargetDragClass = "droptarget-drag";
+        const string dropTargetClass = "droptarget";
 
     private List<string> _ipdropClasses = new List<string>() { dropTargetClass };
 
@@ -99,7 +101,7 @@
         list.Clear();
         foreach (var file in await reader.EnumerateFilesAsync())
         {
-            var fileInfo = await file.ReadFileInfoAsync();
+            IFileInfo fileInfo = await file.ReadFileInfoAsync();
             list.Add(fileInfo);
         }
         // this.StateHasChanged();
@@ -109,16 +111,16 @@
     public async Task ReadFile(IFileReaderRef list)
     {
         this.StateHasChanged();
-        var nl = Environment.NewLine;
-        var fileList = await list.EnumerateFilesAsync();
-        var imgUriList = new List<string>();
+        string nl = Environment.NewLine;
+        IEnumerable<IFileReference> fileList = await list.EnumerateFilesAsync();
+        List<string> imgUriList = new List<string>();
 
         foreach (var file in fileList)
         {
             var fileInfo = await file.ReadFileInfoAsync();
             this.StateHasChanged();
 
-            using (var fs = await file.OpenReadAsync())
+            using (AsyncDisposableStream fs = await file.OpenReadAsync())
             {
                 var bufferSize = fs.Length; // 20480
                 var buffer = new byte[bufferSize];
@@ -138,10 +140,16 @@
 
     private async Task<string> UploadFile(byte[] img)
     {
-        Console.WriteLine("Post to: " + FileUploadRoute);
-
-        var resp = await Http.PostAsync(FileUploadRoute, new ByteArrayContent(img));
-        var fileName = await resp.Content.ReadAsStringAsync();
+        HttpResponseMessage resp;
+        if (CancellationToken == null)
+        {
+            resp = await Http.PostAsync(FileUploadRoute, new ByteArrayContent(img));
+        }
+        else
+        {
+            resp = await Http.PostAsync(FileUploadRoute, new ByteArrayContent(img), CancellationToken);
+        }
+        string fileName = await resp.Content.ReadAsStringAsync();
         return fileName;
     }
 }

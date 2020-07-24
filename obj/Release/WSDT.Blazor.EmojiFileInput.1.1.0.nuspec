@@ -29,7 +29,7 @@
     </frameworkReferences>
   </metadata>
   <files>
-    <file src="C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\EmojiPicker\bin\Release\netcoreapp3.1\EmojiPicker.dll" target="lib\netcoreapp3.1\EmojiPicker.dll" />
-    <file src="C:\Users\WSDT\Desktop\C#_.NET\KevinRiedl\RealtimeChat_WebAssembly\EmojiPicker\bin\Release\netcoreapp3.1\EmojiPicker.xml" target="lib\netcoreapp3.1\EmojiPicker.xml" />
+    <file src="C:\Users\keri\Desktop\RealtimeChat_WebAssembly\EmojiPicker\bin\Release\netcoreapp3.1\EmojiPicker.dll" target="lib\netcoreapp3.1\EmojiPicker.dll" />
+    <file src="C:\Users\keri\Desktop\RealtimeChat_WebAssembly\EmojiPicker\bin\Release\netcoreapp3.1\EmojiPicker.xml" target="lib\netcoreapp3.1\EmojiPicker.xml" />
   </files>
 </package>

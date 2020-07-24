@@ -1,6 +1,7 @@
 ﻿@namespace WSDT.EmojiFilePicker
 @using WSDT.EmojiFilePicker.Sub
 @using Markdig
+@using System.Threading 
 
 <style>
     .messagePreviewContainer {
@@ -95,7 +96,7 @@
 </div>
 
 <div style="@StyleDropzone @(IsFilePickerCollapsed ? "display:none;" : "")">
-    <FileUploader AddFiles="AddFiles" FileUploadRoute="@FileUploadRoute" />
+    <FileUploader AddFiles="AddFiles" FileUploadRoute="@FileUploadRoute" CancellationToken="@CancellationToken" />
 </div>
 
 @if (ShowPreview && _isInputFocused && PreviewMessage != null)
@@ -125,14 +126,14 @@
     [Parameter] public string StyleEmojiBtnContainer { get; set; } = "";
     [Parameter] public string StyleEmojiBtn { get; set; } = "";
     [Parameter] public string StyleEmojiPopoverContainer { get; set; } = "";
-    [Parameter] public string StyleBtnClearContainer { get; set; } = ""; 
-    [Parameter] public string StyleBtnClear { get; set; } = ""; 
+    [Parameter] public string StyleBtnClearContainer { get; set; } = "";
+    [Parameter] public string StyleBtnClear { get; set; } = "";
     [Parameter] public string StyleBtnSubmitContainer { get; set; } = "";
     [Parameter] public string StyleBtnSubmit { get; set; } = "";
 
     /// <summary>Display clear button</summary>
-    [Parameter] public bool ShowClearBtn { get; set; } = true; 
-    
+    [Parameter] public bool ShowClearBtn { get; set; } = true;
+
     /// <summary>Reset/Clear Button label. Only takes effect when ShowClearBtn is true.</summary>
     [Parameter] public string ClearBtnLbl { get; set; } = "Clear"; // NEW
 
@@ -150,6 +151,9 @@
 
     /// <summary>Web-Url the uploaded files will be sent to.</summary>
     [Parameter] public string FileUploadRoute { get; set; } = "/";
+
+    /// <summary>Optional cancellation token for file upload route.</summary>
+    [Parameter] public CancellationToken CancellationToken { get; set; }
 
     /// <summary>Text-input value. Mainly used to bind internal value.</summary>
     [Parameter]
