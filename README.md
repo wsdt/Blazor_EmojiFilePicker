@@ -1,6 +1,6 @@
 # Blazor_EmojiFilePicker [![HitCount](http://hits.dwyl.com/wsdt/Blazor_EmojiFilePicker.svg)](http://hits.dwyl.com/wsdt/Blazor_EmojiFilePicker) [![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors) [![GitHub license](https://img.shields.io/github/license/wsdt/Blazor_EmojiFilePicker.svg)](https://github.com/wsdt/Blazor_EmojiFilePicker/blob/master/LICENSE) [![Generic badge](https://img.shields.io/badge/Made%20for-Blazor-blueviolet)](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor) [![Donate](https://img.shields.io/badge/Donate-Pay%20me%20a%20coffee-3cf)](https://github.com/wsdt/Global/wiki/Donation) [![saythanks](https://img.shields.io/badge/say-thanks-ff69b4.svg)](https://saythanks.io/to/kevin.riedl.privat%40gmail.com) [![Codacy Badge](https://api.codacy.com/project/badge/Grade/4b858f0c655241faa186027bcc650b89)](https://app.codacy.com/manual/wsdt/Blazor_EmojiFilePicker?utm_source=github.com&utm_medium=referral&utm_content=wsdt/Blazor_EmojiFilePicker&utm_campaign=Badge_Grade_Dashboard)
 
-Bootstrap Text-Input with Smiley- and File-Support for Blazor. **Full customizable!**
+Bootstrap Text-Input with Smiley- and File-Support for Blazor. **Fully customizable!**
 ![Regular Input](https://github.com/wsdt/Blazor_EmojiFilePicker/blob/master/docs/img/InputView.PNG "Regular Input")
 
 ## Example projects 
