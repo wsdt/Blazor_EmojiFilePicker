@@ -3,6 +3,8 @@
 Bootstrap Text-Input with Smiley- and File-Support for Blazor. **Fully customizable!**
 ![Regular Input](https://github.com/wsdt/Blazor_EmojiFilePicker/blob/master/docs/img/InputView.PNG "Regular Input")
 
+**Not actively maintained, unless I receive a couple of issues :-)**
+
 ## Example projects 
 * [WSDT/RealtimeChat_WebAssembly](https://github.com/wsdt/RealtimeChat_WebAssembly)
 
